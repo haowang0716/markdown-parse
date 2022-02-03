@@ -26,7 +26,7 @@ public class MarkdownParseTest {
         Path fileName = Path.of("test-file.md");
 	    String contents = Files.readString(fileName);
 
-        assertEquals("test for file 1", test1, MarkdownParse.getLinks(contents)); 
+        assertEquals("test for file 1", test2, MarkdownParse.getLinks(contents)); 
     }
 
     public void parseTest3() throws IOException {
