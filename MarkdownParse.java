@@ -11,7 +11,7 @@ public class MarkdownParse {
         // the next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
-            //int nextOpenBracket = markdown.indexOf("[", currentIndex);
+            int nextOpenBracket = markdown.indexOf("[", currentIndex);
             if (nextOpenBracket == -1){
                 System.out.println("Invalid Input");
                 throw new IllegalArgumentException();
