@@ -39,10 +39,10 @@ public class MarkdownParseTest {
 
     public void parseTest4() throws IOException {
         List<String> contents4 = List.of(" ");
-        Path fileName = Path.of("test-file4.md");
+        Path fileName = Path.of("test-file4");
 	    String contents = Files.readString(fileName);
 
-        assertEquals( null , MarkdownParse.getLinks(contents)); 
+        assertEquals(null , MarkdownParse.getLinks(contents)); 
     }
 
 
