@@ -23,7 +23,7 @@ public class MarkdownParseTest {
     @Test
     public void parseTest2() throws IOException {
         List<String> test1 = List.of("https://something.com", "some-page.html");
-        Path fileName = Path.of("test-file.md");
+        Path fileName = Path.of("test-file");
 	    String contents = Files.readString(fileName);
 
         assertEquals("test for file 1", test1, MarkdownParse.getLinks(contents)); 
