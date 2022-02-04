@@ -38,11 +38,11 @@ public class MarkdownParseTest {
     }
 
     public void parseTest4() throws IOException {
-        List<String> contents4 = List.of("![image](http://image.com)");
+        List<String> contents4 = List.of(" ");
         Path fileName = Path.of("test-file4.md");
 	    String contents = Files.readString(fileName);
 
-        assertEquals("test for file 1", contents4, MarkdownParse.getLinks(contents)); 
+        assertEquals(contents4, MarkdownParse.getLinks(contents)); 
     }
 
 
