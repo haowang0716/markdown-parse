@@ -1,1 +1,1 @@
-![image](http://image.com)
+[image](http://image.com)
