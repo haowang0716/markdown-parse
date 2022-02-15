@@ -50,12 +50,6 @@ public class MarkdownParse {
         int openParen = markdown.indexOf("(");
         int closeParen = 0;
         while(currentIndex < markdown.length()) {
-            // Fix for tests 2 and 8
-            int prevIndex = currentIndex;
-            int prevOpenBracket = nextOpenBracket;
-            int prevCloseBracket = nextCloseBracket;
-            int prevOpenParen = openParen;
-            int prevCloseParen = closeParen;
 
             if (nextCloseBracket > openParen) break;
             nextOpenBracket = markdown.indexOf("[", currentIndex);
@@ -68,14 +62,17 @@ public class MarkdownParse {
             openParen == -1 || closeParen == -1){
                 break;
             }
+            
 
             if (!checkExtension(markdown.substring(openParen +1, closeParen)) && openParen-nextCloseBracket==1)
             {
-                if(markdown.substring(openParen + 1, closeParen).indexOf(".")!=-1)
-                    toReturn.add(markdown.substring(openParen + 1, closeParen));
+                String link = markdown.substring(openParen + 1, closeParen);
+                if(link.indexOf(" ") == -1)
+                    toReturn.add(link);
             }
             currentIndex = closeParen + 1;
         }
+
         return toReturn;
     }
 
