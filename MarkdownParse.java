@@ -63,7 +63,7 @@ public class MarkdownParse {
 
             // Fix for tests 2 and 8
             if(nextOpenBracket == -1 || nextCloseBracket == -1 || 
-            openParen == -1 || closeParen == -1){
+            openParen < prevOpenParen || closeParen < prevCloseParen){
                 break;
             }
             
