@@ -53,9 +53,13 @@ public class MarkdownParse {
 
             if (nextCloseBracket > openParen) break;
             nextOpenBracket = markdown.indexOf("[", currentIndex);
+            System.out.println("First" + "\n" + currentIndex +"\n");
             nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
+            System.out.println("Second" + "\n" + nextOpenBracket +"\n");
             openParen = markdown.indexOf("(", nextCloseBracket);
+            System.out.println("Third" + "\n" +nextCloseBracket + "\n");
             closeParen = markdown.indexOf(")", openParen);
+            System.out.println("Fourth" + "\n" + openParen + "\n");
 
             // Fix for tests 2 and 8
             if(nextOpenBracket == -1 || nextCloseBracket == -1 || 
