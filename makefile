@@ -3,7 +3,11 @@ MarkdownParse.class : MarkdownParse.java
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 MarkdownTest.class : MarkdownTest.java MarkdownParse.class
+=======
+MarkdownTest.class : MarkdownParseTest.java MarkdownParse.class
+>>>>>>> parent of 7a1b404 (Update makefile)
 =======
 MarkdownTest.class : MarkdownParseTest.java MarkdownParse.class
 >>>>>>> parent of 7a1b404 (Update makefile)
